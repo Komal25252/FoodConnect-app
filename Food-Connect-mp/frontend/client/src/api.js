@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", // updated to correct backend port
+  baseURL: "http://localhost:5001/api", // updated to correct backend port
   withCredentials: true, // if you're using cookies/JWT
 });
 

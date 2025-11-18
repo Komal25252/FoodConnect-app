@@ -100,17 +100,17 @@ const DonationForm = ({ onDonationAdded }) => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-semibold text-green-600 mb-4">
+    <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+      <h2 className="text-xl sm:text-2xl font-semibold text-green-600 mb-3 sm:mb-4">
         Add New Donation
       </h2>
 
       <form onSubmit={handleSubmit}>
         {/* Food Type */}
-        <div className="mb-4">
+        <div className="mb-3 sm:mb-4">
           <label
             htmlFor="foodType"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-xs sm:text-sm font-bold mb-1.5 sm:mb-2"
           >
             Food Type
           </label>
@@ -121,9 +121,8 @@ const DonationForm = ({ onDonationAdded }) => {
             value={formData.foodType}
             onChange={handleChange}
             placeholder="e.g., Rice, Bread, Curry"
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              errors.foodType ? "border-red-500" : ""
-            }`}
+            className={`shadow appearance-none border rounded w-full py-2 px-3 text-sm sm:text-base text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errors.foodType ? "border-red-500" : ""
+              }`}
             required
           />
           {errors.foodType && (
@@ -132,10 +131,10 @@ const DonationForm = ({ onDonationAdded }) => {
         </div>
 
         {/* Quantity */}
-        <div className="mb-4">
+        <div className="mb-3 sm:mb-4">
           <label
             htmlFor="quantity"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-xs sm:text-sm font-bold mb-1.5 sm:mb-2"
           >
             Quantity
           </label>
@@ -146,9 +145,8 @@ const DonationForm = ({ onDonationAdded }) => {
             value={formData.quantity}
             onChange={handleChange}
             placeholder="e.g., 5 servings, 2kg"
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              errors.quantity ? "border-red-500" : ""
-            }`}
+            className={`shadow appearance-none border rounded w-full py-2 px-3 text-sm sm:text-base text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errors.quantity ? "border-red-500" : ""
+              }`}
             required
           />
           {errors.quantity && (
@@ -157,10 +155,10 @@ const DonationForm = ({ onDonationAdded }) => {
         </div>
 
         {/* Expiry Time */}
-        <div className="mb-4">
+        <div className="mb-3 sm:mb-4">
           <label
             htmlFor="expiryTime"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-xs sm:text-sm font-bold mb-1.5 sm:mb-2"
           >
             Expiry Time
           </label>
@@ -170,9 +168,8 @@ const DonationForm = ({ onDonationAdded }) => {
             name="expiryTime"
             value={formData.expiryTime}
             onChange={handleChange}
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              errors.expiryTime ? "border-red-500" : ""
-            }`}
+            className={`shadow appearance-none border rounded w-full py-2 px-3 text-sm sm:text-base text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errors.expiryTime ? "border-red-500" : ""
+              }`}
             required
           />
           {errors.expiryTime && (
@@ -181,10 +178,10 @@ const DonationForm = ({ onDonationAdded }) => {
         </div>
 
         {/* Pickup Location */}
-        <div className="mb-4">
+        <div className="mb-3 sm:mb-4">
           <label
             htmlFor="pickupLocation"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-xs sm:text-sm font-bold mb-1.5 sm:mb-2"
           >
             Pickup Location
           </label>
@@ -195,9 +192,8 @@ const DonationForm = ({ onDonationAdded }) => {
             value={formData.pickupLocation}
             onChange={handleChange}
             placeholder="Full address"
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              errors.pickupLocation ? "border-red-500" : ""
-            }`}
+            className={`shadow appearance-none border rounded w-full py-2 px-3 text-sm sm:text-base text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errors.pickupLocation ? "border-red-500" : ""
+              }`}
             required
           />
           {errors.pickupLocation && (
@@ -208,11 +204,11 @@ const DonationForm = ({ onDonationAdded }) => {
         </div>
 
         {/* Preferred Option */}
-        <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
+        <div className="mb-4 sm:mb-6">
+          <label className="block text-gray-700 text-xs sm:text-sm font-bold mb-1.5 sm:mb-2">
             Preferred Option
           </label>
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
             <label className="inline-flex items-center">
               <input
                 type="radio"
@@ -222,7 +218,7 @@ const DonationForm = ({ onDonationAdded }) => {
                 onChange={handleChange}
                 className="form-radio h-4 w-4 text-green-600"
               />
-              <span className="ml-2 text-gray-700">NGO Pickup</span>
+              <span className="ml-2 text-sm sm:text-base text-gray-700">NGO Pickup</span>
             </label>
             <label className="inline-flex items-center">
               <input
@@ -233,7 +229,7 @@ const DonationForm = ({ onDonationAdded }) => {
                 onChange={handleChange}
                 className="form-radio h-4 w-4 text-green-600"
               />
-              <span className="ml-2 text-gray-700">Restaurant Delivery</span>
+              <span className="ml-2 text-sm sm:text-base text-gray-700">Restaurant Delivery</span>
             </label>
           </div>
         </div>
@@ -243,7 +239,7 @@ const DonationForm = ({ onDonationAdded }) => {
           <button
             type="submit"
             disabled={loading}
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+            className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 sm:px-6 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out text-sm sm:text-base"
           >
             {loading ? "Adding..." : "Add Donation"}
           </button>

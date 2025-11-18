@@ -9,6 +9,11 @@ const ngoSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
   address: { type: String },
+  location: {
+    latitude: { type: Number },
+    longitude: { type: Number },
+    address: { type: String }
+  },
   phone: { type: String },
   description: { type: String },
   registrationNumber: { type: String },

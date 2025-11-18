@@ -58,6 +58,20 @@ const donationSchema = new mongoose.Schema({
   completedAt: { 
     type: Date, 
     default: null 
+  },
+  rating: {
+    type: Number,
+    min: 1,
+    max: 5,
+    default: null
+  },
+  review: {
+    type: String,
+    default: null
+  },
+  ratedAt: {
+    type: Date,
+    default: null
   }
 }, { timestamps: true });
 

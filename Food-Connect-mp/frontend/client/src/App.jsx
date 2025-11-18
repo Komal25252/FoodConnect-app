@@ -9,6 +9,7 @@ import RegisterNGO from "./pages/auth/RegisterNGO";
 import RegisterRestaurant from "./pages/auth/RegisterRestaurant";
 import NGODashboard from "./pages/dashboards/NGODashboard";
 import RestaurantDashboard from "./pages/dashboards/RestaurantDashboard";
+import RestaurantReviewsPage from "./pages/RestaurantReviewsPage";
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
       {/* Routes */}
       <Routes>
         <Route path="/" element={<LandingPage/>} />
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
@@ -38,6 +39,9 @@ const App = () => {
         <Route path="/login-restaurant" element={<LoginRestaurant />} />
         <Route path="/register-ngo" element={<RegisterNGO />} />
         <Route path="/register-restaurant" element={<RegisterRestaurant />} />
+        
+        {/* Reviews Page */}
+        <Route path="/restaurant-reviews/:restaurantId" element={<RestaurantReviewsPage />} />
       </Routes>
     </>
   );

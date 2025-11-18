@@ -23,6 +23,7 @@ import express from "express";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import donationRoutes from "./routes/donationRoutes.js";
+import chatRoutes from "./routes/chatRoutes.js";
 import cors from "cors";
 
 const app = express();
@@ -43,8 +44,9 @@ app.use(express.json());
 app.use("/api/contact", contactRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/donations", donationRoutes);
+app.use("/api/chats", chatRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 // Start server only after DB is connected
 connectDB().then(() => {
